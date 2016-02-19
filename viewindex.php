@@ -13,7 +13,7 @@ $records=mysql_query($sql);
 <div id="holder">
 	<div id="header"><h1 align="center">Squaredoor.com</h1></div>
 		<div align="center"><?php include 'links.php';?></div>
-<div id="login-form" align="center"><h3>You Booking Dashboard</h3>
+<div id="login-form" align="center"><h3>Your Booking Dashboard</h3>
 	<?php
 		while ($table_listing=mysql_fetch_assoc($records))
 		{
