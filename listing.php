@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 			$ownerid=$_SESSION['user'];
 				if(mysql_query("INSERT INTO table_listing(listing_owner_user_id,listing_name,listing_address,listing_price) VALUES($ownerid,'$lname','$address',$price)"))
 					{
-						echo "<script>alert('successfully registered ');</script>";
+						echo "<script>alert('Your Listing successfully added ');</script>";
 					}
 				else
 					{
