@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
 $uid=$_SESSION['user'];
 
-   $sql="select* from table_booking where booking_user_id='$uid'";
+   $sql="select* from table_booking where booking_user_id='$uid'order by booking_id desc";
    $records=mysql_query($sql);
 ?>
 
