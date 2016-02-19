@@ -1,7 +1,7 @@
 <?php
 include 'dbconn.php';
 
-$sql="select* from table_listing";
+$sql="select* from table_listing order by listing_id desc";
 $records=mysql_query($sql);
 ?>
 <html>
