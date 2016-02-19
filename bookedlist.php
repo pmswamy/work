@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
 $uid=$_SESSION['user'];
 
-   $sql="select* from table_booking where booking_user_id='$uid'order by booking _id desc";
+   $sql="select* from table_booking where booking_user_id='$uid'order by booking_id desc";
    $records=mysql_query($sql);
 ?>
 
@@ -16,7 +16,7 @@ $uid=$_SESSION['user'];
 <body bgcolor="skyblue">
 	<div id="header"><h1 align="center">Squaredoor.com</h1></div>
 		<div align="center"><?php include 'links.php';?></div>
-<div id="login-form" align="center"><h3>You Booked details</h3>
+<div id="login-form" align="center"><h3>Your Booked details</h3>
 	<?php
 		while ($table_booking=mysql_fetch_assoc($records))
 		{
