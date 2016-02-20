@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 	<?php }
 		else {?>
 			<th><a href="viewlistings.php">viewListings</a></th>
-			<th><a href="listing.php">Add Listing</a>
+			<th><a href="createlisting.php">Add Listing</a>
 			<th><a href="viewindex.php">View Listings for Bokking</a></th>
 			<th><a href="bookedlist.php">Booked Listings</a></th>
 			<th><a href="logout.php?logout">Logout</a></th>
