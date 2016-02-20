@@ -1,6 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
  include 'dbconn.php';
+ include 'booking.php';
 
 $uid=$_SESSION['user'];
 
@@ -17,18 +18,7 @@ $uid=$_SESSION['user'];
 	<div id="header"><h1 align="center">Squaredoor.com</h1></div>
 		<div align="center"><?php include 'links.php';?></div>
 <div id="login-form" align="center"><h3>Your Booked details</h3>
-	<?php
-		while ($table_booking=mysql_fetch_assoc($records))
-		{
-			 echo "<table>";
- 				echo "<tr>"."<td>"."Booking_Id:"."</td><td>".$table_booking['booking_id']."</td></tr>";
- 				echo "<tr>"."<td>"."Booking_Listing_Id:"."</td><td>".$table_booking['booking_listing_id']."</td></tr>";
- 				echo "<tr>"."<td>"."Booking_User_Id:"."</td><td>".$table_booking['booking_user_id']."</td></tr>";
- 				echo "<tr>"."<td>". "Booking_Amount:"."</td><td>".$table_booking['booking_amount']."</td></tr>";
- 				echo "---------------------------------------";
-		}  
-			echo"</table>"
-	?>
+	<div><?php booking::display()?></div>
 </div>
 	<div id="footer">
 		<div align="center" ><?php 
